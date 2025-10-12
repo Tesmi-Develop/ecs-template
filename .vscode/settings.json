@@ -1,0 +1,27 @@
+{
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"files.eol": "\n",
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnSave": true
+	},
+	"eslint.run": "onType",
+	"eslint.format.enable": true,
+	"editor.insertSpaces": false,
+	"editor.codeActionsOnSave": [
+		"source.organizeImports",
+		"source.fixAll",
+		"source.addMissingImports"
+	],
+	"files.associations": {
+		"queue": "cpp"
+	},
+	"luau-lsp.require.mode": "relativeToFile",
+	"luau-lsp.require.directoryAliases": {
+    	"@lune/": "~/.lune/.typedefs/0.8.9/"
+	}
+}

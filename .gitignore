@@ -1,0 +1,7 @@
+/node_modules
+/out
+/include
+flamework.build
+sourcemap.json
+*.tsbuildinfo
+*.env

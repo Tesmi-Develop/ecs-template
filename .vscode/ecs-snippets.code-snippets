@@ -1,0 +1,27 @@
+{
+	"ECS Component": {
+		"prefix":["component"],
+		"description": "Create a ECS component",
+		"body": [
+			"import { ECSComponent } from \"@ecsframework/core\";",
+			"",
+			"@ECSComponent()",
+			"export class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} {",
+				"",
+			"}",
+		]
+	},
+
+	"ECS System": {
+		"prefix":["system"],
+		"description": "Create a ECS system",
+		"body": [
+			"import { BaseSystem, ECSSystem } from \"@ecsframework/core\"",
+			"",
+			"@ECSSystem()",
+			"export class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} extends BaseSystem {",
+				"",
+			"}",
+		]
+	},
+}
