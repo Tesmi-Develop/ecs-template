@@ -3,6 +3,7 @@ import { Flamework } from "@flamework/core";
 import Log, { Logger } from "@rbxts/log";
 import { LoggerContext } from "@rbxts/log/out/Logger";
 import { SetupLogger } from "shared/utilities/setup-logger";
+import planckJabby from "@rbxts/planck-jabby";
 import("@ecsframework/replicator").expect();
 import("@ecsframework/entity-prototype").expect();
 
@@ -23,4 +24,6 @@ framework.Container.Register<Logger>((context: unknown) => {
 		},
 	});
 });
+
+framework.Scheduler.addPlugin(new planckJabby());
 framework.Start();

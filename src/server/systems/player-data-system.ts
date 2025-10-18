@@ -21,7 +21,8 @@ export class PlayerDataSystem extends BaseSystem {
 			]);
 
 			this.savingSystem.LoadProfile(player, entity).then(() => {
-				this.SetComponent<ReadyPlayerTag>(entity, {});
+				print("Loaded profile for " + player.Name);
+				this.SetComponent<ReadyPlayerTag>(entity);
 			});
 		});
 

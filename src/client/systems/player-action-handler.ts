@@ -1,7 +1,6 @@
 import { BaseSystem, ECSSystem } from "@ecsframework/core";
 import { Functions } from "client/network";
 import { PlayerActionMetadata, RegisteredPlayerActions, ServerResponse } from "shared/player-actions/player-action";
-import { PingAction } from "shared/player-actions/test-action";
 
 @ECSSystem()
 export class PlayerActionHandler extends BaseSystem {
@@ -17,24 +16,5 @@ export class PlayerActionHandler extends BaseSystem {
 		}
 
 		return result as ServerResponse<M["__ReturnType"]>;
-	}
-
-	OnStartup(): void {
-		task.delay(5, () => {
-			print("Sending actions");
-			for (let index = 0; index < 5; index++) {
-				this.SendAction(PingAction, {
-					PingData: 1,
-				}).then((result) => print(result, index));
-			}
-
-			task.wait(6);
-			print("Sending actions again");
-			for (let index = 0; index < 5; index++) {
-				this.SendAction(PingAction, {
-					PingData: 1,
-				}).then((result) => print(result, index));
-			}
-		});
 	}
 }

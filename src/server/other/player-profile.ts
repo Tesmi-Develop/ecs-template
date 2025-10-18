@@ -32,7 +32,7 @@ export class PlayerProfile extends ProfileWrapper {
 					return DeepCloneTable(document.read());
 				})
 				.catch((message) => {
-					warn(`Player {player.Name}'s data failed to load: {message}`);
+					warn(`Player ${this.player.Name}'s data failed to load: ${message}`);
 
 					this.player.Kick("Data failed to load.");
 

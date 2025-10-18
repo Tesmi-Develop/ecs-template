@@ -5,6 +5,6 @@ interface PingAction {
 }
 
 export const PingAction = PlayerAction<PingAction>({
-	ExecutionMode: ActionExecutionMode.Sing,
+	ExecutionMode: ActionExecutionMode.Parallel,
 	Cooldown: 1,
 });

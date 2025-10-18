@@ -1,4 +1,4 @@
-import { BaseSystem, ECSComponent, RobloxInstanceComponent } from "@ecsframework/core";
+import { ECSComponent, RobloxInstanceComponent } from "@ecsframework/core";
 import { Replicated } from "@ecsframework/replicator";
 
 @Replicated({
@@ -7,5 +7,7 @@ import { Replicated } from "@ecsframework/replicator";
 		return instanceData?.Instance === player;
 	},
 })
-@ECSComponent()
-export class ReadyPlayerTag extends BaseSystem {}
+@ECSComponent({
+	IsTag: true,
+})
+export class ReadyPlayerTag {}
